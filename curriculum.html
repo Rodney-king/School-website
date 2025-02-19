@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum - St JOHNS School</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <header>
+        <h1>Curriculum</h1>
+    </header>
+
+    <main class="split-screen">
+        <!-- Left Side: Curriculum Content -->
+        <div class="curriculum-content">
+            <h2>Our Academic Programs</h2>
+            <p>We offer a well-rounded curriculum that fosters creativity, critical thinking, and academic excellence.</p>
+            
+            <h3>Subjects Offered:</h3>
+            <ul>
+                <li><button onclick="toggleContent('math')">Mathematics</button></li>
+                <li><button onclick="toggleContent('science')">Science</button></li>
+                <li><button onclick="toggleContent('history')">History</button></li>
+                <li><button onclick="toggleContent('languages')">Languages</button></li>
+                <li><button onclick="toggleContent('arts')">Arts & Music</button></li>
+            </ul>
+
+            <div id="content-area">
+                <p>Select a subject to see details.</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Curriculum Image -->
+        <div class="curriculum-image">
+            <img src="curriculum.jpeg" alt="Curriculum Overview">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 St JOHNS School. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleContent(subject) {
+            let contentArea = document.getElementById("content-area");
+            let subjects = {
+                math: "Our math program includes Algebra, Geometry, Calculus, and Statistics. We focus on problem-solving and analytical skills.",
+                science: "Our science curriculum covers Biology, Chemistry, Physics, and Environmental Science with hands-on experiments.",
+                history: "Students explore World History, American History, Civics, and Geography, learning about major events and cultures.",
+                languages: "We offer English, Spanish, French, and Mandarin courses to enhance communication and cultural understanding.",
+                arts: "Our arts program includes Visual Arts, Music, Drama, and Dance, encouraging creativity and self-expression."
+            };
+
+            contentArea.innerHTML = `<p>${subjects[subject]}</p>`;
+        }
+    </script>
+</body>
+</html>

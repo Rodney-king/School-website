@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - St JOHNS School</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <header>
+        <h1>School Calendar</h1>
+    </header>
+
+    <main class="split-screen">
+        
+        <div class="left-side">
+            <img src="calendar.jpeg" alt="School Calendar">
+        </div>
+
+        <!-- Right Side: Calendar Controls and Info -->
+        <div class="right-side">
+            <h2>Important Dates</h2>
+            <p>Click a button below to see more information.</p>
+
+            <div class="button-container">
+                <button onclick="showCalendar()">📅 View Calendar</button>
+                <button onclick="showResources()">📖 School Resources</button>
+                <button onclick="showAnnouncements()">📢 Announcements</button>
+                <button onclick="enrollNow()">📝 Enroll Now</button>
+                <button onclick="checkSchoolStatus()">🏫 School Status</button>
+            </div>
+
+            <div id="status" class="calendar-info">
+                <p>Select an option to see details here.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 St JOHNS School. All rights reserved.</p>
+    </footer>
+
+    <script src="calendar.js"></script>  <!-- Link to external JavaScript file -->
+</body>
+</html>
